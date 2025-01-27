@@ -7,12 +7,17 @@
 			content="width=device-width, initial-scale=1.0" />
 		<title>Babylon Test</title>
 	</head>
-	<body>
+	<body style="margin: 0; padding: 0">
+		<div style="position: absolute; top: 50px; left: 20px">
+			<button id="nodes_10k">10k</button>
+			<button id="nodes_100k">100k</button>
+			<button id="nodes_1M">1m</button>
+		</div>
 		<script
 			type="module"
 			src="./main.js"></script>
 		<canvas
 			style="width: 100vw; height: 100vh"
-			id="renderCanvas"></canvas>
+			id="container"></canvas>
 	</body>
 </html>
