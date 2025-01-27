@@ -29,8 +29,8 @@ const cubeMaterial = new THREE.MeshStandardMaterial({
 	metalness: 0.7,
 });
 
-// Instanced Mesh for 10,000 Cubes
-const count = 100000;
+// Instanced Mesh for 1,000,000 Cubes
+const count = 1000000;
 const mesh = new THREE.InstancedMesh(cubeGeometry, cubeMaterial, count);
 
 // Generate Random Positions and Rotations
