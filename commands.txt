@@ -1,0 +1,3 @@
+git checkout babylon; npm run preview
+
+git checkout three; npm run preview
