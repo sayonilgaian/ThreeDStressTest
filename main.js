@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import generateRandomNumber from './utils/renerateRandomNumber';
 
 // Buttons
 const btn_10k = document.getElementById('nodes_10k');
@@ -62,14 +63,14 @@ function renderCanvas() {
 	const dummy = new THREE.Object3D(); // Helper object for transformations
 	for (let i = 0; i < count; i++) {
 		dummy.position.set(
-			(Math.random() - 0.5) * 100, // X: Random position between -50 and 50
-			(Math.random() - 0.5) * 100, // Y: Random position between -50 and 50
-			(Math.random() - 0.5) * 100 // Z: Random position between -50 and 50
+			(generateRandomNumber(1) - 0.5) * 100, // X: Random position between -50 and 50
+			(generateRandomNumber(1) - 0.5) * 100, // Y: Random position between -50 and 50
+			(generateRandomNumber(1) - 0.5) * 100 // Z: Random position between -50 and 50
 		);
 		dummy.rotation.set(
-			Math.random() * Math.PI, // Random X rotation
-			Math.random() * Math.PI, // Random Y rotation
-			Math.random() * Math.PI // Random Z rotation
+			generateRandomNumber(1) * Math.PI, // Random X rotation
+			generateRandomNumber(1) * Math.PI, // Random Y rotation
+			generateRandomNumber(1) * Math.PI // Random Z rotation
 		);
 		dummy.updateMatrix(); // Update the transformation matrix
 		mesh.setMatrixAt(i, dummy.matrix); // Apply to instanced mesh
